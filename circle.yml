@@ -19,7 +19,3 @@ test:
   override:
     - (echo "Running JUnit tests!")
     - (cd WritersChallenge && ./gradlew connectedAndroidTest)
-    # copy the build outputs to artifacts
-    - cp -r WritersChallenge/build/outputs $CIRCLE_ARTIFACTS
-    # copy the test results to the test results directory.
-    - cp -r WritersChallenge/build/outputs/androidTest/results/* $CIRCLE_TEST_REPORTS
