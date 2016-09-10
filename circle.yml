@@ -15,11 +15,11 @@ dependencies:
 test:
   pre:
     - $ANDROID_HOME/tools/emulator -avd testAVD -no-skin -no-audio -no-window:
-      background: true
+        background: true
     - (./gradlew assembleDebug):
-      timeout: 1200
+        timeout: 1200
     - (./gradlew assembleDebugTest):
-      timeout: 1200
+        timeout: 1200
     - (source environmentSetup.sh && waitForAVD)
   override:
     - (echo "Running JUnit tests!")
