@@ -31,4 +31,3 @@ if [ ! -e ${INITIALIZATION_FILE} ]; then
   ...
   touch ${INITIALIZATION_FILE}
 fi
-Contact GitHub API Training Shop Blog About
