@@ -14,10 +14,7 @@ test:
   pre:
     - $ANDROID_HOME/tools/emulator -avd testAVD -no-skin -no-audio -no-window:
         background: true
-    - (./gradlew assembleDebug):
-        timeout: 1200
-    - (./gradlew assembleDebugTest):
-        timeout: 1200
+    - circle-android wait-for-boot
   override:
     - (echo "Running JUnit tests!")
     - (./gradlew connectedAndroidTest)
