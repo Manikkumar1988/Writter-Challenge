@@ -19,7 +19,7 @@ function getAndroidSDK(){
 }
 
 
-function waitAVD {
+function waitForAVD {
     (
     local bootanim=""
     export PATH=$(dirname $(dirname $(which android)))/platform-tools:$PATH
