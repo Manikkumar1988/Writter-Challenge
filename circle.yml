@@ -1,3 +1,7 @@
+eneral:
+  artifacts:
+    -/home/ubuntu/Writter-Challenge/build/outputs/reports/androidTest/connected
+
 machine:
   environment:
     ANDROID_HOME: /home/ubuntu/android
@@ -15,7 +19,7 @@ test:
   pre:
     - $ANDROID_HOME/tools/emulator -avd testAVD -no-skin -no-audio -no-window:
         background: true
-    - circle-android wait-for-boot
+    - (source environmentSetup.sh && waitForAVD)
   override:
     - (echo "Running JUnit tests!")
     - (./gradlew connectedAndroidTest)
