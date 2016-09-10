@@ -1,7 +1,3 @@
-general:
-  artifacts:
-    -/home/ubuntu/Writter-Challenge/build/outputs/reports/androidTest/connected
-
 machine:
   environment:
     ANDROID_HOME: /home/ubuntu/android
