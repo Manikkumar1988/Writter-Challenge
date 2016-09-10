@@ -20,6 +20,6 @@ test:
     - (echo "Running JUnit tests!")
     - (cd WritersChallenge && ./gradlew connectedAndroidTest)
     # copy the build outputs to artifacts
-    - cp -r Writter-Challenge/build/outputs $CIRCLE_ARTIFACTS
+    - cp -r WritersChallenge/build/outputs $CIRCLE_ARTIFACTS
     # copy the test results to the test results directory.
-    - cp -r Writter-Challenge/build/outputs/androidTest/results/* $CIRCLE_TEST_REPORTS
+    - cp -r WritersChallenge/build/outputs/androidTest/results/* $CIRCLE_TEST_REPORTS
