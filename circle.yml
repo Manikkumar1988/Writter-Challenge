@@ -9,6 +9,7 @@ dependencies:
   override:
     - (echo "Downloading Android SDK v19 now!")
     - (source environmentSetup.sh && getAndroidSDK)
+    - (cd WritersChallenge && ./gradlew)
 
 test:
   pre:
