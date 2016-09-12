@@ -56,7 +56,7 @@ public class fxth {
     
     @Before
     public void setUp() {
-        Writter activity = mActivityRule.getActivity();
+        final Writter activity = mActivityRule.getActivity();
         Runnable wakeUpDevice = new Runnable() {
             public void run() {
                 activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON |
