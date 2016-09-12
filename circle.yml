@@ -18,6 +18,7 @@ test:
     - (source environmentSetup.sh && waitForAVD)
   override:
     - (echo "Running JUnit tests!")
+    - fb-adb shell input keyevent 82
     - (cd WritersChallenge && ./gradlew connectedAndroidTest)
     - cp -r WritersChallenge/app/build/reports/androidTests/connected $CIRCLE_ARTIFACTS
     - cp -r WritersChallenge/app/build/outputs/apk $CIRCLE_ARTIFACTS
