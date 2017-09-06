@@ -1,3 +1,7 @@
+#
+# Build configuration for Circle CI
+#
+
 general:
     artifacts:
         - /home/ubuntu/AndroidApp/app/build/outputs/apk/
@@ -30,3 +34,4 @@ test:
             timeout: 360
         # copy the build outputs to artifacts
         - cp -r app/build/outputs $CIRCLE_ARTIFACTS 
+            
